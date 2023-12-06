@@ -22,7 +22,7 @@ eyes = getPNGS("eyes")
 hats = getPNGS("hats")
 
 people = []
-for i in range(10):
+for i in range(40):
     img = Image.alpha_composite(faces[random.randint(0, len(faces) - 1)], hats[random.randint(0, len(hats) - 1)])
     img = Image.alpha_composite(img, shirt[random.randint(0, len(shirt) - 1)])
     img = Image.alpha_composite(img, eyes[random.randint(0, len(eyes) - 1)])
@@ -35,9 +35,10 @@ img2 = people[1]
 img3 = people[2]
 
 # combining 10 randomly generated people horizonally
-new_image = Image.new('RGB',(10 * people[0].size[0], people[0].size[1]), (250,250,250))
-for i in range(1,10):
-    new_image.paste(people[i],(0,0))
-    new_image.paste(people[i],(i * people[i].size[0],0))
+new_image = Image.new('RGB',(10 * people[0].size[0], 5 * people[0].size[1]), (250,250,250))
+for j in range(7):
+    for i in range(1,11):
+        new_image.paste(people[i],(0,0))
+        new_image.paste(people[i],(i * people[i].size[0],j * people[i].size[0]))
 
 new_image.show()
