@@ -39,6 +39,6 @@ new_image = Image.new('RGB',(10 * people[0].size[0], 5 * people[0].size[1]), (25
 for j in range(7):
     for i in range(11):
         new_image.paste(people[i],(0,0))
-        new_image.paste(people[i],(i * people[i].size[0],j * people[i].size[1] - 20))
+        new_image.paste(people[i],(i * people[i].size[0],j * people[i].size[1]))
 
 new_image.show()
