@@ -37,8 +37,8 @@ img3 = people[2]
 # combining 10 randomly generated people horizonally
 new_image = Image.new('RGB',(10 * people[0].size[0], 5 * people[0].size[1]), (250,250,250))
 for j in range(7):
-    for i in range(1,11):
+    for i in range(11):
         new_image.paste(people[i],(0,0))
-        new_image.paste(people[i],(i * people[i].size[0],j * people[i].size[0]))
+        new_image.paste(people[i],(i * people[i].size[0],j * people[i].size[1] - 20))
 
 new_image.show()
