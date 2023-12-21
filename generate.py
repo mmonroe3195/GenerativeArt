@@ -42,4 +42,5 @@ for index, foreground in enumerate(foregrounds):
     # Adds other alterations to the photos randomly such as tilt
     other_alterations = [new_image.rotate(45), new_image, new_image.rotate(20), new_image, new_image.convert('1'), new_image, new_image.convert('L'), new_image, new_image.rotate(-40), new_image, new_image.rotate(-90), new_image.convert('L'), new_image]
     other_alterations[index].show()
+    other_alterations[index].save("image " + str(index) + ".jpg")
    
